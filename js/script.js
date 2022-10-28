@@ -23,20 +23,20 @@ createApp({
             newtask:'',
             hasError: false,
             listaSpesa:[
-                'Task 1',
-                'Task 2',
-                'Task 3'
+                'Fare html',
+                'Fare css',
+                'Fare javascript'
             ]
         }
     },
 
     methods:{
         addTask(){
-            if(this.newtask.lnegth >=3){
-               this.listaSpesa.unshift(this.newtask);
-               this.hasError = false;
+            if(this.newtask.lnegth <=3){
+               //this.listaSpesa.unshift(this.newtask);
+               this.hasError = true;
             } else{
-                this.hasError = true;
+                this.listaSpesa.push(this.newtask);
             }
             this.newtask = '';
         },
