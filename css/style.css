@@ -1,6 +1,15 @@
 /* Common */
-:root{
+/*:root{
 
+}*/
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+li{
+    list-style-type: none;
 }
 
 /* Generals */
