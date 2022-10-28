@@ -1,5 +1,5 @@
 /*
-Rifare l'esercizio della to do list argomento dell to-do list a piacere :faccia_che_festeggia:.
+Rifare l'esercizio della to do list argomento dell to-do list a piacere.
 Questa volta però ogni todo sarà un oggetto, formato da due proprietà:
 - text, una stringa che indica il testo del todo
 - done, un booleano (true/false) che indica se il todo è stato fatto oppure no
@@ -23,20 +23,29 @@ createApp({
             newtask:'',
             hasError: false,
             listaSpesa:[
-                'Fare html',
-                'Fare css',
-                'Fare javascript'
+                {
+                    compito: 'Fare html',
+                    done: false,
+                },
+                {
+                    compito: 'Fare css',
+                    done: false,
+                },
+                {
+                    compito: 'Fare javascript',
+                    done: false,
+                }
             ]
         }
     },
 
     methods:{
         addTask(){
-            if(this.newtask.lnegth <=3){
+            if(this.newtask.length <=3){
                //this.listaSpesa.unshift(this.newtask);
                this.hasError = true;
             } else{
-                this.listaSpesa.push(this.newtask);
+                this.listaSpesa.push({compito: this.newtask, done: false});
             }
             this.newtask = '';
         },

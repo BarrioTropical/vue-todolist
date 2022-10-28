@@ -34,7 +34,7 @@
             </div>
             <ul v-if="listaSpesa.length > 0">
                 <li v-for="(item, index) in listaSpesa" :key="index">
-                    <span>{{item}}</span>
+                    <span>{{item.compito}}</span>
                     <button class=" btn border-white text-white round-3" @click="removeTask(index)">Cancella</button>
                 </li>
             </ul>
