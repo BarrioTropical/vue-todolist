@@ -23,9 +23,9 @@ createApp({
             newtask:'',
             hasError: false,
             listaSpesa:[
-                'Pane',
-                'Latte',
-                'Uova'
+                'Task 1',
+                'Task 2',
+                'Task 3'
             ]
         }
     },
@@ -39,6 +39,9 @@ createApp({
                 this.hasError = true;
             }
             this.newtask = '';
+        },
+        removeTask(){
+            this.listaSpesa.splice(i, 1);
         }
     },
 

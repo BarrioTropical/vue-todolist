@@ -6,10 +6,23 @@ body{
     background-color: black;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+ul{
+    text-align: center;
 }
 
 li{
     list-style-type: none;
+}
+
+input{
+    border-radius: 30px;
+}
+
+button{
+    margin: 10px;
 }
 
 /* Generals */

@@ -29,15 +29,16 @@
             <div>
             <h2>Aggiungi task</h2>
             <input type="text" v-model="newtask" @keyup.enter ="addTask">
-            <button @click="addTask" class=" btn btn-primary round-3 ">Aggiungi</button>
+            <button @click="addTask (index)" class=" btn btn-primary round-3 ">Aggiungi</button>
             <div v-if="hasError">Il task deve essere di almeno 3 caratteri</div>
             </div>
-            <ul>
+            <ul v-if="listaSpesa.length > 0">
                 <li v-for="(item, index) in listaSpesa" :key="index">
                     <span>{{item}}</span>
-                    <button class=" btn border-white text-white round-3">Cancella</button>
+                    <button class=" btn border-white text-white round-3" @click="removeTask(index)">Cancella</button>
                 </li>
             </ul>
+            <div v-else> Non ci sono cose da comprare</div>
         </div>
 
     </main>
