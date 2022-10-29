@@ -29,7 +29,7 @@ createApp({
                 },
                 {
                     compito: 'Fare css',
-                    done: false,
+                    done: true,
                 },
                 {
                     compito: 'Fare javascript',
@@ -45,11 +45,14 @@ createApp({
                //this.listaSpesa.unshift(this.newtask);
                this.hasError = true;
             } else{
-                this.listaSpesa.push({compito: this.newtask, done: false});
+                this.listaSpesa.unshift({compito: this.newtask, done: false});
+                //this.listaSpesa.push({compito: this.newtask, done: false});
+                this.newtask = '';
+                this.hasError = false;
             }
             this.newtask = '';
         },
-        removeTask(){
+        removeTask(i){
             this.listaSpesa.splice(i, 1);
         }
     },
